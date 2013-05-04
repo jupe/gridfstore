@@ -11,7 +11,7 @@
         "email": "jussiva@gmail.com"
       } 
     ],
-    "keywords": ["mongo", "gridfs", "mongoose"],
+    "keywords": ["mongo", "GridFS", "mongoose"],
     "repository" : {
         "type": "git",
         "url": "https://github.com/jupe/gridfstore.git"
@@ -22,10 +22,8 @@
       "uuid": "*"
     },
     "devDependencies": {
-        "mongoose": "*",
         "mocha": "*",
-        "chai": "*",
-        "stringstream": "*"
+        "chai": "*"
     },
     "license": "MIT",
     "engines": { "node": ">=0.8.0" },

@@ -97,7 +97,6 @@ describe('GridFS Store test',function(){
        assert.equal(error, null, error);
        assert.typeOf(res, 'object');
        var doc = res.toObject();
-       console.log(doc.metadata.filename);
        assert.equal(doc.metadata.filename, 'test5.txt');
        assert.equal(doc.metadata.title, 'example');
        assert.operator(doc.length, '>', 1000);
@@ -218,7 +217,7 @@ describe('GridFS Find tests',function(){
       done();
     });
   });
-  
+  /*
   it('read data by file uuid[1]', function(done){
     gridfstore.read(uuids[4], {stream: true, gunzip: false}, function(error, res){
       assert.equal(error, null);
@@ -228,5 +227,6 @@ describe('GridFS Find tests',function(){
       done();
     });
   });
+  */
   
 });     
