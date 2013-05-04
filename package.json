@@ -1,0 +1,35 @@
+{
+    "name": "gridfstore",
+    "version": "0.0.1",
+    "preferGlobal": false,
+    "description": "gridfs with mongoose",
+    "main": "lib/gridfstore.js",
+    "author": "Jussi Vatjus-Anttila <jussiva@gmail.com>",
+    "contributors": [ 
+      {
+        "name": "Jussi Vatjus-Anttila",
+        "email": "jussiva@gmail.com"
+      } 
+    ],
+    "keywords": ["mongo", "gridfs", "mongoose"],
+    "repository" : {
+        "type": "git",
+        "url": "https://github.com/jupe/gridfstore.git"
+    },
+    "dependencies": {
+      "mongoose": "*",
+      "GridFS": "*",
+      "uuid": "*"
+    },
+    "devDependencies": {
+        "mongoose": "*",
+        "mocha": "*",
+        "chai": "*",
+        "stringstream": "*"
+    },
+    "license": "MIT",
+    "engines": { "node": ">=0.8.0" },
+    "scripts": {
+      "test": "mocha -R list test"
+    }
+}
