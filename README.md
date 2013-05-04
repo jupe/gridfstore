@@ -6,6 +6,12 @@ GridFS is convenient way to store files and it allows all mongodb features like 
 This library is intended to help GridFS usage with nodejs and mongoose. It allows efficient way to store data, 
 e.g. on the fly gzipped before storing and when gzipped data is read back gzip can be extracted on the fly.
 
+Installation
+------------
+```
+npm install gridfstore
+```
+
 Documentation
 -------------
 ```
@@ -30,7 +36,6 @@ gridfstore.read( uuid, [options,] callback)
 
 Usage
 -----
-
 ```
 var mongoose  = require('mongoose'),
    Schema = mongoose.Schema,
