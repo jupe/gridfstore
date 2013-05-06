@@ -16,6 +16,11 @@ Documentation
 -------------
 ```
 /*
+  register schema
+*/
+gridfstore.register('collection', myschema);
+
+/*
   store arguments:
   data                      -> string|buffer|readstream
   options: { gzip: true }   -> gzip input data before store gridfs
