@@ -31,10 +31,11 @@ gridfstore.store( metadata, data, [options,] callback)
 gridfstore.model   
 /*
   read arguments:
-  uuid                      -> store generate uuid as filename
-  options: { gunzip: true } -> gunzip output data before call callback
-  options: { get: true }    -> get entire data at once (default method)
-  options: { stream: true } -> get data as read stream (not working yet)
+  uuid                                    -> store generate uuid as filename
+  options: { 
+    gunzip: Boolean,                      -> gunzip output data before call callback (default: false)
+    method: String   ('sync'|'async')     -> get as sync or asyncronously (stream)  (default: sync)
+  }
 */
 gridfstore.read( uuid, [options,] callback)
 ```
@@ -43,20 +44,16 @@ Usage
 -----
 ```
 var mongoose  = require('mongoose'),
-   Schema = mongoose.Schema,
    gridfstore = require('../lib/gridfstore');
    
-var myschema = new Schema({
-  filename: {type: String, unique: true, required: true},
-  length: {type: Number},
-  metadata: {
-    title: {type: String},
-    owner: {type: String}
-  }
-});
+var mymeta = {
+  title: {type: String},
+  owner: {type: String}
+}
 
+gridfstore.register('test', mymeta);
 
-gridfstore.store( {metadata: {filename: 'test1.txt', title: 'example', owner: 'jva'}}, 
+gridfstore.store( {filename: 'test1.txt', title: 'example', owner: 'jva'}, 
                   'this is file content',
                   function(error, meta){
     //meta == whole metadata from gridfs
