@@ -243,7 +243,6 @@ describe('GridFS read async tests',function(){
       assert.equal(error, null);
       assert.typeOf(res.meta, 'object');
       assert.typeOf(res.stream, 'object');
-      console.log(res.meta);
       var buffer  = new Buffer(res.meta.length);
       var i=0;
       res.stream.on('data',function(block){
@@ -268,7 +267,6 @@ describe('GridFS read async tests',function(){
       assert.equal(error, null);
       assert.typeOf(res.meta, 'object');
       assert.typeOf(res.stream, 'object');
-      console.log(res.meta);
       var buffer  = new Buffer(res.meta.length);
       var i=0;
       res.stream.on('data',function(block){
