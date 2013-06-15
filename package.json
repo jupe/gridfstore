@@ -1,6 +1,6 @@
 {
     "name": "gridfstore",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "preferGlobal": false,
     "description": "gridfs with mongoose",
     "main": "lib/gridfstore.js",
