@@ -8,7 +8,7 @@ var
   mongoose  = require('mongoose');
   
 var Schema = mongoose.Schema;
-var db = mongoose.connect('mongodb://localhost/test', { db: { safe: false }});
+var db = mongoose.connect('mongodb://127.0.0.1/test', { db: { safe: false }});
 
 var uuids = [];  
 
