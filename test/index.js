@@ -255,7 +255,7 @@ describe('GridFS read async tests',function(){
       });
       
       res.stream.on('end', function(){
-        assert.equal(buffer.length, 8078);
+        assert.equal(buffer.length, 9614);
         done();
       });
       
